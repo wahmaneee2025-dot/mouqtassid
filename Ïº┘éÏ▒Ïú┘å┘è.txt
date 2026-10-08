@@ -1,0 +1,25 @@
+تطبيق نظام المقتصد — خطوات التثبيت
+
+1) Firebase (console.firebase.google.com) بحساب Google:
+   - Add project (أنشئ مشروعًا) باسم مثل: mouqtassid-taghia. لا حاجة لـ Google Analytics.
+   - Build > Authentication > Get started > Sign-in method > Email/Password > Enable > Save.
+   - Build > Firestore Database > Create database > اختر موقعًا أوروبيًا (eur3 أو europe-west) > Production mode.
+   - في Firestore > Rules: امسح ما فيه والصق محتوى الملف firestore.rules ثم Publish.
+   - Project settings (الترس) > Your apps > زر </> (Web) > اسم: المقتصد > Register app. انسخ كتلة firebaseConfig.
+
+2) الإعدادات موضوعة مسبقًا في config.js (مشروع mouqtassid-taghia).
+
+3) الرفع على GitHub Pages (مجاني):
+   - أنشئ حسابًا في github.com ثم New repository باسم: mouqtassid (Public).
+   - Add file > Upload files: اسحب كل محتوى هذا المجلد (index.html و sw.js و config.js و manifest.webmanifest والمجلدين icons و files) > Commit changes.
+   - Settings > Pages > Source: Deploy from a branch > Branch: main / (root) > Save. بعد دقيقة يظهر الرابط: https://اسمك.github.io/mouqtassid/
+   - في Firebase > Authentication > Settings > Authorized domains > Add domain: اسمك.github.io
+
+4) التثبيت:
+   - الحاسوب (Chrome أو Edge): افتح الرابط > أيقونة التثبيت في شريط العنوان > Install.
+   - الهاتف أندرويد (Chrome): افتح الرابط > القائمة ⋮ > إضافة إلى الشاشة الرئيسية / Install app.
+
+5) أول دخول: «إنشاء الحساب (أول مرة فقط)» ببريدك وكلمة سر، ثم استورد ملف النسخة الاحتياطية من التطبيق القديم.
+   في الجهاز الثاني: «دخول» بنفس البريد وكلمة السر.
+
+التحديث لاحقًا: ارفع index.html الجديد مكان القديم في GitHub، ويتحدث التطبيق عند فتحه مع الأنترنت.
